@@ -8,7 +8,7 @@ function extraiLinks(texto) {
   while ((temp = regex.exec(texto)) !== null) {
     arrayResultados.push({ [temp[1]]: temp[2] });
   }
-  return arrayResultados;
+  return arrayResultados.length === 0 ? 'Não hã links' : arrayResultados;
 }
 
 function pegarErro(erro) {
@@ -27,7 +27,10 @@ async function pegaArquivo(caminhoArquivo) {
   }
 }
 
+
 //pegaArquivo("texto1.md");
+
+
 
 export default pegaArquivo;
 
